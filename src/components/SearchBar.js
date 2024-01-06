@@ -1,15 +1,16 @@
 
 const SearchBar = ({onSubmit}) => {
-const handleClick = () => {
-    let userText = document.querySelector("input").value;
-    onSubmit(userText)
-}
-
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        let userInput = document.querySelector('input').value;
+        onSubmit(userInput)
+    }
 
     return (
         <div>
-            <input type="text"/>
-            <button onClick={handleClick}>Click me</button>
+            <form onSubmit={handleFormSubmit}>
+                <input/>
+            </form>
         </div>
     )
 }
