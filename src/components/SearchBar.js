@@ -1,6 +1,16 @@
-const SearchBar = () => {
+
+const SearchBar = ({onSubmit}) => {
+const handleClick = () => {
+    let userText = document.querySelector("input").value;
+    onSubmit(userText)
+}
+
+
     return (
-        <div>SearchBar</div>
+        <div>
+            <input type="text"/>
+            <button onClick={handleClick}>Click me</button>
+        </div>
     )
 }
 
