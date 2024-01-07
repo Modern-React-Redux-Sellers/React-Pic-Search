@@ -10,7 +10,7 @@ const App = () => {
     const handleSubmit = async (term) => {
        const results = await searchImages(term); //Returns a Promise, must be async/await
         console.log(results)
-        setImages(results) //sets images to returned array
+        setImages(results) //sets images array to returned array from api search
     }
 
     //onSubmit prop passed to SearchBar with value of handleSubmit function
